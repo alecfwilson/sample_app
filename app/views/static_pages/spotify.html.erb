@@ -1,7 +1,8 @@
 <% provide(:title, "Kanye West Drops New Album - Listen on Spotify") %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <div style="width:320px"><script type="text/javascript" src="http://static.urx.io.s3.amazonaws.com/units/web/24a3aa12-3b4a-4f33-a284-89bed38cf60a.min.js"></script></div>
+    <p>Kanye West Drops New Album - Listen on Spotify</p>
+    <div><script type="text/javascript" src="http://static.urx.io.s3.amazonaws.com/units/web/24a3aa12-3b4a-4f33-a284-89bed38cf60a.min.js"></script></div>
   </div>
 </div>
 <div class="row">
@@ -16,8 +17,12 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <div style="width:320px">
+    <p>You searched for <span class="well well-sm"><%= params[:q] %></span></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
     <%= javascript_include_tag "urx", "data-turbolinks-track" %>
-    </div>
   </div>
 </div>
