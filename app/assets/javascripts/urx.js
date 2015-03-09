@@ -766,11 +766,15 @@
         return b
     }(v);
     (function(f) {
+        var name = "q"
+        function getURLParameter(name) {
+          return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+        }
         var b = function(b) {
                 return b.split(";").join(" !important;")
             },
             s = document.currentScript || document.querySelector('script[src="urx.js"]');
-        void 0 !== f && ($urx.setApiKey("q8e+TZjbTFw+inpaS0euL9acVR6cZRoKvZCs++KElj4akkgF3C4L0D+vY3Epuck9J+3t0yEni0N9niA=|D83KJ/9E6p3SEMBGlwO2ENELBz6GODce"), $urx.search(f + "warriors tickets limit:1 domain:seatgeek.com", function(g) {
+        void 0 !== f && ($urx.setApiKey("q8e+TZjbTFw+inpaS0euL9acVR6cZRoKvZCs++KElj4akkgF3C4L0D+vY3Epuck9J+3t0yEni0N9niA=|D83KJ/9E6p3SEMBGlwO2ENELBz6GODce"), $urx.search(f + getURLParameter(name), function(g) {
             var f = g.results[0],
                 m = b("padding: 0; border: 0; font-size: 16px; font-weight: 600; font-family: 'Helvetica Neue', sans-serif; line-height: 1; "),
                 t = b("margin:0;");
