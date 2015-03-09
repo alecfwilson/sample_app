@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  require 'token_phrase'
   def home
   end
 
