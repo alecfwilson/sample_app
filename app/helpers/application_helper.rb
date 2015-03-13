@@ -11,7 +11,12 @@ module ApplicationHelper
 
   def dan_domain
     noun = TokenPhrase.generate(:numbers => false).split('-').sample.pluralize
-    domain = "www.#{noun}.com"
+    if Whois.whois("#{noun}.com").available?
+      avail = "available"
+    else
+      avail = "not available"
+    end
+    domain = "www.#{noun}.com is #{avail}"
     return domain
   end
 end
