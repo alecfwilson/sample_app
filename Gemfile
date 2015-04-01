@@ -17,6 +17,8 @@ gem 'turbolinks',              '2.3.0'
 gem 'jbuilder',                '2.2.3'
 gem 'token_phrase'
 gem 'whois'
+gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'sdoc',                    '0.4.0', group: :doc
 gem 'pry-rails'                       , :group => :development
 
